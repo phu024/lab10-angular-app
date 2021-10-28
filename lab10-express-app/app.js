@@ -26,9 +26,9 @@ try {
     Product = mongoose.model('Products', userSchema)
 }
 expressApp.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://location:4200')
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELECT, OPTIONS')
-    res.setHeader('Access-Control-Allow-Headers', 'Conten-Type,Option,Authorization')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Option,Authorization')
     return next();
 });
 expressApp.use(expressFunctions.json());
